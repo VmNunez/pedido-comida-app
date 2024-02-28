@@ -26,7 +26,7 @@ Pantalla de resumen
 
 ### Enlace
 
-- Visita la aplicación: [https://pedido-comida-g4xsg61up-vmnunez.vercel.app/](https://pedido-comida-g4xsg61up-vmnunez.vercel.app/)
+- Visita la aplicación: [https://pedido-comida-app.vercel.app/](https://pedido-comida-app.vercel.app/)
 
 ## Tecnologías Utilizadas
 
