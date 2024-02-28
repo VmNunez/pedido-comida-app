@@ -1,34 +1,76 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Pedido Comida App
 
-## Getting Started
+La aplicación de Pedido Comida ofrece a los usuarios la posibilidad de seleccionar y agregar productos de alimentación a su carrito de compra, permitiéndoles ajustar la cantidad de cada artículo según sus preferencias. Después, los usuarios son dirigidos a una página de resumen de la compra, donde no solo pueden revisar sus selecciones, sino también editar la cantidad de los productos y eliminarlos si lo desean, antes de proceder al siguiente paso. Una vez satisfechos con su selección, los usuarios avanzan a la página de detalles y total, donde se calcula automáticamente el total a pagar. Después de ingresar su nombre la opción para confirmar el pedido se habilita, brindando a los usuarios un proceso fluido y conveniente para realizar sus pedidos de comida.
 
-First, run the development server:
+## Tabla de contenidos
+- [Pedido Comida App](#pedido-comida-app)
+  - [Tabla de contenidos](#tabla-de-contenidos)
+  - [Vista Previa](#vista-previa)
+    - [Capturas de pantalla](#capturas-de-pantalla)
+    - [Enlace](#enlace)
+  - [Tecnologías Utilizadas](#tecnologías-utilizadas)
+  - [Configuración](#configuración)
+  - [Uso](#uso)
+  - [Autor](#autor)
+
+## Vista Previa
+
+### Capturas de pantalla
+Pantalla de inicio
+
+![Pantalla de inicio](public/assets/img/screenshots/pagina_inicio.png)
+
+Pantalla de resumen
+
+![Selección de productos](public/assets/img/screenshots/pagina_resumen.png)
+
+### Enlace
+
+- Visita la aplicación: [https://pedido-comida-g4xsg61up-vmnunez.vercel.app/](https://pedido-comida-g4xsg61up-vmnunez.vercel.app/)
+
+## Tecnologías Utilizadas
+
+- **Next.js**: Framework de React para la creación de aplicaciones web.
+- **Tailwind CSS**: Framework de CSS para el diseño y estilización rápida.
+- **Prisma**: ORM para interactuar con la base de datos.
+- **Context API**: API de React para gestionar el estado global de la aplicación.
+
+## Configuración
+
+1. Clona el repositorio:
+
+    ```bash
+    git clone https://github.com/VmNunez/pedido-comida-app.git
+    ```
+
+2. Instala las dependencias:
+
+    ```bash
+    cd pedido-comida-app
+    npm install
+    ```
+
+3. Configura las variables de entorno:
+
+    Crea un archivo `.env.local` en la raíz del proyecto y configura las siguientes variables:
+
+    ```plaintext
+    DATABASE_URL=URL_DE_TU_BASE_DE_DATOS
+    ```
+
+4. Ejecuta las migraciones de la base de datos:
+
+    ```bash
+    npx prisma migrate dev
+    ```
+
+## Uso
+
+Para ejecutar la aplicación en un entorno de desarrollo:
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Autor
+Víctor Manuel Núñez Pradas
