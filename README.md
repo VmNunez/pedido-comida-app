@@ -26,7 +26,7 @@ Pantalla de resumen
 
 ### Enlace
 
-- Visita la aplicación: [https://pedido-comida-app.vercel.app/](https://pedido-comida-app.vercel.app/)
+- Deshabilitado temporalmente: [)
 
 ## Tecnologías Utilizadas
 
