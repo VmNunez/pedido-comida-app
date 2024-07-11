@@ -1,32 +1,31 @@
 # Pedido Comida App
 
-La aplicación de Pedido Comida ofrece a los usuarios la posibilidad de seleccionar y agregar productos de alimentación a su carrito de compra, permitiéndoles ajustar la cantidad de cada artículo según sus preferencias. Después, los usuarios son dirigidos a una página de resumen de la compra, donde no solo pueden revisar sus selecciones, sino también editar la cantidad de los productos y eliminarlos si lo desean, antes de proceder al siguiente paso. Una vez satisfechos con su selección, los usuarios avanzan a la página de detalles y total, donde se calcula automáticamente el total a pagar. Después de ingresar su nombre la opción para confirmar el pedido se habilita, brindando a los usuarios un proceso fluido y conveniente para realizar sus pedidos de comida.
+La aplicación Pedido Comida permite a los usuarios seleccionar y agregar productos de alimentación a su carrito de compra, ajustar la cantidad de cada artículo y revisar sus selecciones antes de confirmar el pedido. Con un proceso fluido y conveniente, los usuarios pueden editar y eliminar productos, ver un resumen de su compra y, finalmente, confirmar su pedido después de ingresar sus detalles.
 
-## Tabla de contenidos
-- [Pedido Comida App](#pedido-comida-app)
-  - [Tabla de contenidos](#tabla-de-contenidos)
-  - [Vista Previa](#vista-previa)
-    - [Capturas de pantalla](#capturas-de-pantalla)
-    - [Enlace](#enlace)
-  - [Tecnologías Utilizadas](#tecnologías-utilizadas)
-  - [Configuración](#configuración)
-  - [Uso](#uso)
-  - [Autor](#autor)
+## Tabla de Contenidos
+- [Vista Previa](#vista-previa)
+  - [Capturas de Pantalla](#capturas-de-pantalla)
+  - [Enlace](#enlace)
+- [Tecnologías Utilizadas](#tecnologías-utilizadas)
+- [Configuración](#configuración)
+- [Uso](#uso)
+- [Autor](#autor)
 
 ## Vista Previa
 
-### Capturas de pantalla
-Pantalla de inicio
+### Capturas de Pantalla
+
+Pantalla de Inicio
 
 ![Pantalla de inicio](public/assets/img/screenshots/pagina_inicio.png)
 
-Pantalla de resumen
+Pantalla de Resumen
 
 ![Selección de productos](public/assets/img/screenshots/pagina_resumen.png)
 
 ### Enlace
 
-- Deshabilitado temporalmente: [)
+- Deshabilitado temporalmente
 
 ## Tecnologías Utilizadas
 
@@ -37,28 +36,56 @@ Pantalla de resumen
 
 ## Configuración
 
-1. Clona el repositorio:
+Para configurar el proyecto sigue estos pasos:
+
+1. **Clona el repositorio**:
 
     ```bash
     git clone https://github.com/VmNunez/pedido-comida-app.git
     ```
 
-2. Instala las dependencias:
+2. **Instala las dependencias**:
 
     ```bash
     cd pedido-comida-app
     npm install
     ```
 
-3. Configura las variables de entorno:
+3. **Configura las Variables de Entorno**:
 
-    Crea un archivo `.env.local` en la raíz del proyecto y configura las siguientes variables:
+    Para que el proyecto funcione correctamente, es necesario configurar la variable de entorno `DATABASE_URL` en el archivo `.env`. A continuación se describe cómo hacerlo:
+
+    1. **Crea el archivo `.env` en la raíz del proyecto** si no existe.
+
+    2. **Configura la Variable `DATABASE_URL`**: Abre el archivo `.env` y añade la siguiente línea, reemplazando `{USUARIO}` y `{CONTRASEÑA}` con tu nombre de usuario y contraseña de la base de datos respectivamente:
+
+        ```plaintext
+        DATABASE_URL="mysql://{USUARIO}:{CONTRASEÑA}@localhost:3306/quioscoapp"
+        ```
+
+        Por ejemplo, si tu usuario es `root` y tu contraseña es `contraseña123`, la línea debería verse así:
+
+        ```plaintext
+        DATABASE_URL="mysql://root:contraseña123@localhost:3306/quioscoapp"
+        ```
+
+    #### Ejemplo Completo
+
+    Si tienes una base de datos MySQL con los siguientes detalles:
+
+    - **Usuario**: `root`
+    - **Contraseña**: `contraseña123`
+    - **Host**: `localhost`
+    - **Puerto**: `3306`
+    - **Nombre de la base de datos**: `quioscoapp`
+
+    Tu archivo `.env` debería contener la siguiente línea:
 
     ```plaintext
-    DATABASE_URL=URL_DE_TU_BASE_DE_DATOS
+    DATABASE_URL="mysql://root:contraseña123@localhost:3306/quioscoapp"
     ```
 
-4. Ejecuta las migraciones de la base de datos:
+4. **Ejecuta las migraciones de la base de datos**:
 
     ```bash
     npx prisma migrate dev
@@ -74,3 +101,4 @@ npm run dev
 
 ## Autor
 Víctor Manuel Núñez Pradas
+
